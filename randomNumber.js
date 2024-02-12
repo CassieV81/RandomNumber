@@ -10,3 +10,16 @@ const randomNumber = (arr) => {
 }
 let a = randomNumber(x);
 console.log(a)
+
+function generateNumbers(arr, n) {
+    let num = [];
+    let a;
+    while (num.length < n) {
+        a = randomNumber(arr);
+        if (!num.includes(a)){
+            num.push(a)
+        }
+    }
+    return num;
+}
+console.log(generateNumbers(x, 5))
